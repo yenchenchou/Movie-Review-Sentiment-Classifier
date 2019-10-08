@@ -1,6 +1,12 @@
 # Movie Review Sentiment Classifier
 ## Introduction
-This project demonstrates a interactive web app for users to paste movie related reviews and the web app will classify whether the review is a positive or negative one by a deployed recurrent neural network. The sentiment classifier is deployed through AWS SageMaker using LSTM in Pytorch. 
+This project demonstrates a interactive web app for users to paste movie related reviews and the web app will classify whether the review is a positive or negative one by a deployed recurrent neural network. The sentiment classifier is deployed through AWS SageMaker using LSTM in Pytorch. All the data and model parameters are stored in AWS S3.
+
+## File instructions
+1. data folder: the place to store the data and the model itself
+2. train folder: includes model.py and train.py. The first one is the structure of the LSTM model and later is about functions that how I trained the model. All the files will be import into 'SageMaker Project.ipynb'
+3. serve folder: the 3 python scripts are for the work of deployment, including data preprocessing, loading the saved model, and data inference.
+4. website folder: the place where we create the interactive web page.
 
 ## Prerequisites
 Here are setups you need to run the code. Please see the [README](https://github.com/udacity/sagemaker-deployment/tree/master/README.md) in the root directory for instructions on setting up a SageMaker notebook and downloading the project files (as well as the other notebooks).
